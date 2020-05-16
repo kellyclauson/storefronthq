@@ -22,8 +22,8 @@ public class ShopifyClient
    private TreeMap<String, Long> title2Id;
 
    private final static int LIMIT = 250;
-   private static final String USER_NAME = "a09fe28c9e42fdd6133b6810fe023297";
-   private static final String PASSWORD = "f167d69ee987e652b77998df2d2caf41";
+   private static final String USER_NAME = "";
+   private static final String PASSWORD = "";
 
    private static final Logger LOGGER = LoggerFactory.getLogger(ShopifyClient.class);
 
