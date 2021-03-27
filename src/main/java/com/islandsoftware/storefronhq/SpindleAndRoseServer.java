@@ -57,15 +57,11 @@ public class SpindleAndRoseServer
       //shopifyClient.createWebHooks(publicUrl);
       LOGGER.info("SpindleAndRose Server Started");
 
-      Runtime.getRuntime().addShutdownHook(new Thread(new Runnable()
-      {
-         public void run()
-         {
-            LOGGER.info("Shutdown signal received");
-            //shopifyClient.shutdown();
-            storeSync.shutdown();
-            LOGGER.info("shut down complete");
-         }
+      Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+         LOGGER.info("Shutdown signal received");
+         //shopifyClient.shutdown();
+         storeSync.shutdown();
+         LOGGER.info("shut down complete");
       }, "SpindleAndRose Server Shutdown"));
    }
 
